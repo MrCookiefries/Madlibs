@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Madlibs
+{% endblock %}
+
+{% block body %}
+    <h1>Pick a story template!</h1>
+    <ul>
+        {% for story in stories %}
+            <li>
+                <a href="/form/{{ story.id }}">Template {{ story.id }}</a>
+                {{ story.template }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
